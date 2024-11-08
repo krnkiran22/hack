@@ -71,6 +71,7 @@ const HomePage = () => {
       <div className="bg-gray-900 pt-0.5 shadow-md border-b-1 border-teal-700">
         <nav className="bg-white text-black py-4 px-6">
           <ul className="flex space-x-8 justify-center">
+ 
             <NavItems
               title="Home"
               items={[
@@ -98,6 +99,12 @@ const HomePage = () => {
             />
             <li className="font-mono text-xl text-black hover:text-teal-300 hover:underline transition-all duration-300">
               <a href="/signup">Sign-up</a>
+ 
+              </li>
+            
+            <li className="font-semibold text-xl text-white hover:text-teal-300 hover:underline transition-all duration-300">
+              <a href="#">Sign-up</a>
+ 
             </li>
             <li className="font-mono text-xl text-black hover:text-teal-300 hover:underline transition-all duration-300">
               <a href="/login">Login</a>

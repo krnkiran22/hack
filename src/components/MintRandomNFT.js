@@ -13,6 +13,7 @@ const MintRandomNFT = () => {
   // Connect Wallet function
   const connectWallet = async () => {
     if (window.ethereum) {
+
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       await provider.send('eth_requestAccounts', []);
       const signer = provider.getSigner();
@@ -22,6 +23,8 @@ const MintRandomNFT = () => {
       setError('Please install MetaMask or another wallet provider.');
     }
   };
+
+  
 
   // Mint NFT function
   const mintNFT = async () => {

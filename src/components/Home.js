@@ -37,8 +37,11 @@ const Home = () => {
         <h1>Welcome to Doctor Connect</h1>
         <p>Connect your wallet to start booking appointments and consultations.</p>
       </div>
+      
     </div>
   );
 };
 
 export default Home;
+
+

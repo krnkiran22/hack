@@ -12,12 +12,12 @@ const NavItems = ({ title, items }) => {
     <li className="relative group">
       <a
         href="#"
-        className="flex items-center font-bold text-lg text-white hover:text-teal-300 transition-all duration-300"
+        className="flex items-center text-lg text-black hover:text-grey-300 transition-all duration-300"
       >
         {title}
         <FaChevronDown className="ml-2 text-sm" />
       </a>
-      <ul className="absolute left-0 hidden group-hover:flex flex-col w-48 bg-gradient-to-r from-teal-600 to-teal-800 text-white border border-teal-300 rounded-lg shadow-lg mt-2 py-2 transition-transform duration-300 ease-in-out transform group-hover:scale-105">
+      <ul className="absolute left-0 hidden group-hover:flex flex-col w-48 bg-gradient-to-r from-teal-600 to-teal-800 text-black border border-teal-300 rounded-lg shadow-lg mt-2 py-2 transition-transform duration-300 ease-in-out transform group-hover:scale-105">
         {items.map((item, index) => (
           <li
             key={index}
@@ -42,168 +42,115 @@ const HomePage = () => {
   return (
     <div>
       {/* First Division */}
-      <div className="flex justify-between items-center bg-teal-600 p-6 text-white shadow-md">
-        <div className="flex flex-col items-center">
+      <div className="flex justify-between items-center bg-white p-2 text-black shadow-md">
+        <div className="flex justify-between items-center">
           <img src={logo} alt="Medico Logo" className="h-10 w-10 mb-2" />
-          <h1 className="text-2xl font-bold">MediCO</h1>
+          <h1 className="text-2xl pl-2 text-teal-500 font-bold">MediCO</h1>
         </div>
         <div className="flex items-center w-2/4 pl-44">
           <input
             type="text"
             placeholder="Search Doctor or Hospital..."
-            className="p-4 rounded w-full border-none hover:border-4 hover:border-teal-900 focus:outline-none"
+            className="p-2 rounded w-full border-2 hover:border-2 hover:border-teal-900 focus:outline-none"
           />
-          <button className="bg-gray-300 p-2 rounded-r-lg h-14 text-teal-500 hover:bg-teal-200 transition duration-300">
+          <button className="bg-teal-500 border-2 h-11 border-teal-500 p-2 rounded-r-lg  text-white hover:bg-white hover:text-teal-500 transition duration-300">
             <FaSearch />
           </button>
         </div>
         <div className="flex space-x-4">
-          <button className="flex items-center bg-gray-200 text-teal-500 px-4 py-2 rounded-lg hover:bg-teal-200 transition duration-300">
+          <button className="flex items-center border-teal-500 border-2 bg-white text-teal-500 px-4 py-2 rounded-lg hover:bg-teal-600 hover:text-white transition duration-300">
             <FaWallet className="mr-2" /> Connect Wallet
           </button>
-          <button className="bg-gray-200 text-teal-500 px-4 py-2 rounded-lg hover:bg-teal-200 transition duration-300">
+          <button className="bg-white border-teal-500 border-2 text-teal-500 px-4 py-2 rounded-lg hover:bg-teal-600 hover:text-white transition duration-300">
             Book Appointment
           </button>
         </div>
       </div>
 
       {/* Second Division */}
-      <div className="bg-gray-900 pt-0.5 shadow-md border-b-2 border-teal-700">
-        <nav className="bg-teal-600 text-white py-4 px-6">
+      <div className="bg-gray-900 pt-0.5 shadow-md border-b-1 border-teal-700">
+        <nav className="bg-white text-black py-4 px-6">
           <ul className="flex space-x-8 justify-center">
             <NavItems
-              title="Patient Care"
+              title="Home"
               items={[
-                "Patient Registration",
-                "Find a Doctor",
-                "Patient Guide",
-                "Facilities",
-                "Insurance Goals",
-                "Transplant Authorization Committee",
-                "Pay Online",
+                "Health Care"
               ]}
             />
             <NavItems
-              title="Centers of Excellence"
+              title="NFT-Minting"
               items={[
-                "Cardiology",
-                "Oncology",
-                "Emergency",
-                "Gastroenterology",
-                "Neurology / Neurosurgery",
-                "Orthopedics",
-                "Robotic surgery",
-                "Transplant",
+                "Health Care"
               ]}
             />
             <NavItems
-              title="Specialties"
+              title="Profile"
               items={[
-                "Health Care",
-                "Cosmetic Clinic",
-                "Center of Genomic Medicine",
-                "Elder care",
-                "Anesthesiology",
-                "Metabolic Surgery",
-                "Dental Clinic",
-                "Dentetics & Clinical Nutrition",
-                "ENT",
+                "Health Care"
               ]}
             />
-            <NavItems
-              title="Procedures"
-              items={[
-                "Brain tumor",
-                "Bone Marrow Transplant",
-                "Bioresorbable Vascular Scaffold",
-                "Breast Cancer",
-                "Chemotherapy",
-                "Cosmetic Surgery",
-              ]}
-            />
-            <NavItems
-              title="International Patient"
-              items={[
-                "Contact us",
-                "Plan your visit",
-                "Services for international patients",
-                "Hospital gallery & virtual tour",
-                "Patient testimonials",
-                "Insurance partners",
-                "Health checks",
-                "Share your feedback",
-              ]}
-            />
-            <NavItems
-              title="Academic & Research"
-              items={[
-                "Clinical Excellence",
-                "CME'S / Workshops / Conferences",
-                "Medical Journals",
-                "Careers",
-              ]}
-            />
+            
             <NavItems
               title="Contact Us"
               items={[
-                "About us",
-                "Consult Doctors Online",
-                "Health Library",
-                "News & Media",
-                "Videos",
+                "Health Care"
               ]}
             />
-            <li className="font-semibold text-xl text-white hover:text-teal-300 hover:underline transition-all duration-300">
-              <a href="#">Sign-up</a>
+            <li className="font-mono text-xl text-black hover:text-teal-300 hover:underline transition-all duration-300">
+              <a href="/signup">Sign-up</a>
             </li>
-            <li className="font-semibold text-xl text-white hover:text-teal-300 hover:underline transition-all duration-300">
-              <a href="#">Login</a>
+            <li className="font-mono text-xl text-black hover:text-teal-300 hover:underline transition-all duration-300">
+              <a href="/login">Login</a>
             </li>
           </ul>
         </nav>
       </div>
 
       {/* Third Division */}
-      <div className="border-4 border-black text-center py-16 h-96 bg-gray-50">
+      <div className="border-2 border-black text-center py-16 h-96 bg-gray-50">
+        <h1></h1>
+        <a href='/appointment' className='bg-teal-500 text-white font-semibold p-6'>Book an Appointment</a>
       </div>
 
       {/* Fourth Division */}
       <div className="flex flex-wrap justify-center mb-8 gap-8 mt-8">
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black  rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
-    <FaCalendarCheck className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Book Appointment</p>
+        <div className='bg-gray-200 h-56 width-4/4 flex flex-wrap justify-center gap-8'>
+  <div className="w-44 h-48 mt-4  hover:text-white hover:bg-teal-600 bg-white rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+    <FaCalendarCheck className="text-4xl hover:text-white animate-bounce text-teal-500 mb-4" />
+    <p className="text-center text-black hover:text-white font-semibold">Book Appointment</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48  mt-4 bg-white border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaClipboardList className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Book Health Check-Up</p>
+    <p className="text-center text-black font-semibold">Book Health Check-Up</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48 mt-4 bg-white border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaLaptopMedical className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Consult Online</p>
+    <p className="text-center text-black font-semibold">Consult Online</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48 mt-4 bg-white border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaCapsules className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Buy Medicine</p>
+    <p className="text-center text-black font-semibold">Buy Medicine</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48 mt-4 bg-white border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaHospital className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Find Hospital</p>
+    <p className="text-center text-black font-semibold">Find Hospital</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48 mt-4 bg-white border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaFileMedical className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">View Health Record</p>
+    <p className="text-center text-black font-semibold">View Health Record</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48 mt-4 bg-white border-black animate- rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaHeart className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Health and Wellness</p>
+    <p className="text-center text-black font-semibold">Health and Wellness</p>
   </div>
-  <div className="w-44 h-48 bg-white shadow-md border-2 border-black rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+  <div className="w-44 h-48 mt-4 bg-white border-black rounded-lg flex flex-col items-center justify-center p-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
     <FaEnvelope className="text-4xl animate-bounce text-teal-500 mb-4" />
-    <p className="text-center text-teal-500 font-semibold">Submit your Opinion</p>
+    <p className="text-center text-black font-semibold">Submit your Opinion</p>
+  </div>
   </div>
 
   {/* Fifth Division */}
-  <div className="bg-teal-600 py-4 text-white">
+  <div className="bg-teal-600 py-4 w-full text-white">
         <nav className="flex justify-center space-x-8">
           <button
             className={`text-xl font-semibold hover:text-teal-300 transition duration-300 ${
@@ -255,7 +202,7 @@ const HomePage = () => {
             </div>
 
             {/* Right side with specialty icons and names */}
-            <div className="grid grid-cols-2 md:grid-cols-3 pl-14 gap-4 mt-6 pr-44 mt-8 md:mt-0">
+            <div className="grid grid-cols-2 md:grid-cols-3 pl-14 gap-4 pr-44 pt-12 md:mt-0">
               <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
                 <FaHeart className="text-4xl text-teal-500" />
                 <p className="mt-2 text-center font-semibold text-gray-700">Heart Care</p>
@@ -309,11 +256,35 @@ const HomePage = () => {
         )}
         
         {selectedTab === "Procedures" && (
-          <div className="text-2xl text-teal-500 text-center">I am a P</div>
+          <div className="text-2xl text-teal-500 text-center">I am a U</div>
         )}
-        {selectedTab === "ProHealth" && (
-          <div className="text-2xl text-teal-500 text-center">I am a H</div>
-        )}
+{selectedTab === "ProHealth" && (
+  <div className="flex justify-center items-center h-full p-8 bg-gray-50 rounded-lg shadow-lg">
+    <div className="max-w-3xl text-center">
+      <h2 className="text-3xl font-bold text-teal-600 mb-4">
+        Get proactive - Be ProHealth!
+      </h2>
+      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+        Build your ProHealth plan now
+      </h3>
+      <p className="text-gray-700 mb-4">
+        ProHealth Program is a unique end-to-end personalized proactive health program that brings together predictive risk analysis, doctor-curated health packages, cutting-edge diagnostics with expert evaluation, and a personalized path to wellness, designed to make positive shifts – making you healthier.
+      </p>
+      <p className="text-gray-700 mb-4">
+        This health program is based on Apollo's pioneering efforts in preventive care for almost 40 years and over 22 million health checks.
+      </p>
+      <p className="text-gray-700 mb-4">
+        Apollo ProHealth program can PREDICT health risks, help PREVENT ailments, and OVERCOME lifestyle diseases where possible.
+      </p>
+      <button className="mt-6 bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition duration-300" href='/appointment'>
+        Book ProHealth
+      </button>
+    </div>
+  </div>
+)}
+
+
+
       </div>
 </div>
 

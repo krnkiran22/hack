@@ -9,7 +9,7 @@ const BookAppointment = () => {
   const [isBooking, setIsBooking] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
 
-  const contractAddress = '0xa42b1378D1A84b153eB3e3838aE62870A67a40EA';
+  const contractAddress = '0xea897abf7a2adfe39eef20a833fded8272aa2ddf';
 
   // Connect Wallet function
   const connectWallet = async () => {

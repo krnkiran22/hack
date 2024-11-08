@@ -8,8 +8,8 @@ import MintRandomNFT from "./components/MintRandomNFT"
 import BookAppointment from './pages/BookAppointment';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
-import MintRandomNFT from './components/MintRandomNFT'
-import HomePage from './pages/Home';
+
+
 
 
 const App = () => {
@@ -21,11 +21,7 @@ const App = () => {
           <Route
             path="/"
             element={
-              <div>
                 <HomePage />
-                <MintRandomNFT />
-                <BookAppointment />
-              </div>
             }
           />
           <Route path="/signup" element={<Signup />} />

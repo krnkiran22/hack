@@ -1,0 +1,17 @@
+{
+  "name": "Gold Milestone NFT",
+  "description": "An NFT awarded for achieving a major milestone.",
+  "image": "ipfs://QmZ7kbc1dddVSDr7wC4AmVdeYktZy16drozqe7QmhkJU8z",  // Replace this later with the actual CID of your image
+  "attributes": [
+    {
+      "trait_type": "Milestone",
+      "value": "Gold"
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Reward Points",
+      "value": 50
+    }
+  ]
+}
+ipfs://QmZ7kbc1dddVSDr7wC4AmVdeYktZy16drozqe7QmhkJU8z
